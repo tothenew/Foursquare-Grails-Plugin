@@ -75,7 +75,7 @@ class Venue {
             JSONArray jsonArray = new JSONArray(venueData.photos)
             jsonArray.each {def photoData ->
                 VenuePhoto venuePhoto = new VenuePhoto(photoData)
-                this.categories.add(category)
+                this.photos.add(venuePhoto)
             }
         }
     }
