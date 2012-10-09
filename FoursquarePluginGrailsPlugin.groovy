@@ -13,7 +13,7 @@ class FoursquarePluginGrailsPlugin {
     // TODO Fill in these fields
     def title = "Foursquare Plugin" // Headline display name of the plugin
     def author = "Vishal Sahu"
-    def authorEmail = "vishsahu@gmail.com"
+    def authorEmail = "vishal@intelligrape.com"
     def description = '''The plugin helps us to search location/venue on foursquare and related venues near that place using foursquare API. It helps to get the checkins, people, photos, tips, user comments/reviews about that venue and much more. It can search/retrieve profile info of user, create new checkins, comment etc.'''
 
     // URL to the plugin's documentation
@@ -25,13 +25,13 @@ class FoursquarePluginGrailsPlugin {
 //    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
-//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
+    def organization = [ name: "IntelliGrape Software", url: "http://www.intelligrape.com/" ]
 
     // Any additional developers beyond the author specified above.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+//    def issueManagement = [ system: "Github", url: "https://github.com/IntelliGrape/Foursquare-Grails-Plugin/issues" ]
 
     // Online location of the plugin's browseable source code.
 //    def scm = [ url: "http://svn.grails-plugins.codehaus.org/browse/grails-plugins/" ]
