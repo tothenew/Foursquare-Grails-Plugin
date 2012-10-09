@@ -12,14 +12,12 @@ class FoursquarePluginGrailsPlugin {
 
     // TODO Fill in these fields
     def title = "Foursquare Plugin Plugin" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
-    def description = '''\
-Brief summary/description of the plugin.
-'''
+    def author = "Vishal Sahu"
+    def authorEmail = "vishsahu@gmail.com"
+    def description = '''The plugin helps us to search location/venue on foursquare and related venues near that place using foursquare API. It helps to get the checkins, people, photos, tips, user comments/reviews about that venue and much more. It can search/retrieve profile info of user, create new checkins, comment etc.'''
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/foursquare-plugin"
+    def documentation = "https://github.com/IntelliGrape/Foursquare-Grails-Plugin/wiki/Foursquare-Grails-plugin-documentation"
 
     // Extra (optional) plugin metadata
 
