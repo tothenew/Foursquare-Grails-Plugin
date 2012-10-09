@@ -8,7 +8,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getSearchUserUrl(oauthToken, 'phone', phone)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.results.each {
                 User user = new User(it)
@@ -24,7 +24,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getSearchUserUrl(oauthToken, 'email', email)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.results.each {
                 User user = new User(it)
@@ -40,7 +40,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getSearchUserUrl(oauthToken, 'twitter', twitter)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.results.each {
                 User user = new User(it)
@@ -56,7 +56,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getSearchUserUrl(oauthToken, 'name', name)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.results.each {
                 User user = new User(it)
@@ -72,7 +72,7 @@ class UserService extends FoursquareService {
         List<Checkin> checkinList = []
         String urlString = getUserCheckinsUrl(oauthToken)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.checkins.items.each {def checkinData ->
                 Checkin checkin = new Checkin(checkinData)
@@ -88,7 +88,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getFriendsListUrl(oauthToken)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.friends.items.each {def userData ->
                 User user = new User(userData)
@@ -104,7 +104,7 @@ class UserService extends FoursquareService {
         List<User> userList = []
         String urlString = getFriendsListUrl(oauthToken)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.friends.items.each {def userData ->
                 User user = new User(userData)

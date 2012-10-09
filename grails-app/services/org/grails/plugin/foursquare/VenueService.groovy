@@ -8,7 +8,7 @@ class VenueService extends FoursquareService {
         List<Venue> venueList = []
         String urlString = getSearchVenueUrl(latitude, longitude)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.venues.each {
                 Venue venue = new Venue(it)
@@ -24,7 +24,7 @@ class VenueService extends FoursquareService {
         List<Venue> venueList = []
         String urlString = getSearchVenueUrl(address)
         try {
-            String responseStr = getResponseOfFoursquareQuery(urlString)
+            String responseStr = getResponseOfQuery(urlString)
             def jsonString = JSON.parse(responseStr)
             jsonString.response.venues.each {
                 Venue venue = new Venue(it)

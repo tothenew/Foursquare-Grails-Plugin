@@ -10,18 +10,7 @@ class FoursquareService {
     @Delegate VenueService venueService
     @Delegate CheckinsService checkinsService
 
-    String getResponseFromFourSquare(String urlPath) {
-        String responseData
-        try {
-            URL url = new URL(urlPath)
-            responseData = url.text
-        } catch (Exception e) {
-            e.printStackTrace()
-        }
-        return responseData
-    }
-
-    String getResponseOfFoursquareQuery(String urlString) {
+    String getResponseOfQuery(String urlString) {
         println("****** Querying URL: ${urlString}")
         String responseString = ''
         try {
