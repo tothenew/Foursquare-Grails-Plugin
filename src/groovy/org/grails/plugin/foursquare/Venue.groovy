@@ -62,8 +62,6 @@ class Venue {
         this.description = venueData?.description
         this.referralId = venueData?.referralId
         this.verified = venueData?.verified
-        println '---------categories--------' + venueData.categories
-        println '---------photos--------' + venueData.photos
         if (venueData.categories) {
             JSONArray jsonArray = new JSONArray(venueData.categories)
             jsonArray.each {def categoryData ->
