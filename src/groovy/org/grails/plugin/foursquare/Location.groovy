@@ -3,8 +3,8 @@ package org.grails.plugin.foursquare
 class Location {
     String address
     String crossStreet
-    Long latitude
-    Long longitude
+    Double latitude
+    Double longitude
     Long distance
     String postalCode
     String city
