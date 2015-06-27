@@ -1,9 +1,12 @@
-class FoursquareGrailsPlugin extends grails.plugins.Plugin{
-    // the plugin version
+package foursquare
+
+import grails.plugins.*
+
+class FourSquareGrailsPlugin extends Plugin {
+
+    def version = "0.2"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "2.0 > *"
-    // the other plugins this plugin depends on
-    def dependsOn = [:]
+    def grailsVersion = "3.0.2 > *"
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
         "grails-app/views/error.gsp"
@@ -24,45 +27,44 @@ class FoursquareGrailsPlugin extends grails.plugins.Plugin{
 //    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
-    def organization = [ name: "IntelliGrape Software", url: "http://www.intelligrape.com/" ]
+    def organization = [ name: "To The New Digital", url: "http://www.tothenew.com/" ]
+
+//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
 
     // Any additional developers beyond the author specified above.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "Github", url: "https://github.com/IntelliGrape/Foursquare-Grails-Plugin/issues" ]
+//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.grails-plugins.codehaus.org/browse/grails-plugins/" ]
+//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
 
-    def doWithWebDescriptor = { xml ->
-        // TODO Implement additions to web.xml (optional), this event occurs before
+    Closure doWithSpring() { {->
+            // TODO Implement runtime spring config (optional)
+        } 
     }
 
-    def doWithSpring = {
-        // TODO Implement runtime spring config (optional)
-    }
-
-    def doWithDynamicMethods = { ctx ->
+    void doWithDynamicMethods() {
         // TODO Implement registering dynamic methods to classes (optional)
     }
 
-    def doWithApplicationContext = { applicationContext ->
+    void doWithApplicationContext() {
         // TODO Implement post initialization spring config (optional)
     }
 
-    def onChange = { event ->
+    void onChange(Map<String, Object> event) {
         // TODO Implement code that is executed when any artefact that this plugin is
         // watching is modified and reloaded. The event contains: event.source,
         // event.application, event.manager, event.ctx, and event.plugin.
     }
 
-    def onConfigChange = { event ->
+    void onConfigChange(Map<String, Object> event) {
         // TODO Implement code that is executed when the project configuration changes.
         // The event is the same as for 'onChange'.
     }
 
-    def onShutdown = { event ->
+    void onShutdown(Map<String, Object> event) {
         // TODO Implement code that is executed when the application shuts down (optional)
     }
 }
